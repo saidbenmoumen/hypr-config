@@ -1,0 +1,319 @@
+* {
+  font-family: "Noto Sans Mono", "Font Awesome 6 Free", "Font Awesome 6 Brands",
+    monospace;
+  transition: none;
+  font-size: 1rem;
+}
+
+/* General */
+window#waybar {
+  background: transparent;
+  color: #ffffff;
+}
+
+window#waybar box.modules-left {
+  padding-left: 1rem;
+}
+
+window#waybar box.modules-right {
+  padding-right: 0.5rem;
+}
+
+/* Buttons */
+button {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+  background: inherit;
+}
+
+/* Sizing */
+#custom-appmenu,
+#profile,
+#clock,
+#battery,
+#bluetooth,
+#temperature,
+#backlight,
+#network,
+#hardware,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#language,
+#mpd,
+#workspaces button,
+#custom-updates {
+  padding: 0.1rem 1rem;
+  color: #ffffff;
+  border-radius: 1rem;
+  margin: 0.4rem 0.2rem;
+  border: 2px solid #fafafa;
+  font-weight: 700;
+}
+
+/* Light */
+#workspaces button:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Subtle */
+#hardware,
+#custom-exit,
+#tray,
+#user {
+  border-color: transparent;
+}
+
+/* Outlined */
+
+/* Solid */
+#pulseaudio,
+#bluetooth,
+#workspaces button.active,
+#custom-updates {
+  background: #fafafa;
+  color: #000000;
+}
+
+/* -----------------------------------------------------
+ * Workspaces
+ * ----------------------------------------------------- */
+#workspaces button {
+  padding-right: 0.4rem;
+  padding-left: 0.4rem;
+}
+#workspaces button.urgent {
+  border-color: red;
+}
+
+/* -----------------------------------------------------
+ * Custom Updates
+ * ----------------------------------------------------- */
+#custom-updates.green {
+  background-color: #ffffff;
+}
+
+#custom-updates.yellow {
+  background-color: #ff9a3c;
+  border-color: #ff9a3c;
+  color: #000000;
+}
+
+#custom-updates.red {
+  background-color: #dc2f2f;
+  border-color: #dc2f2f;
+  color: #ffffff;
+}
+
+/* PulseAudio */
+
+/* #pulseaudio {
+  border-color: #f1c40f;
+  color: #000000;
+}
+
+#pulseaudio.muted {
+  border-color: #90b1b1;
+  color: #2a5c45;
+}
+
+#pulseaudio:hover {
+  border-color: #ffd86e;
+} */
+
+/* Workspaces */
+
+/* #workspaces button {
+  background: #444;
+}
+
+#workspaces button:hover {
+  background: gray;
+}
+
+#workspaces button.focused {
+  border-color: #f1c40f;
+  color: #000;
+  font-weight: 600;
+}
+
+#workspaces button.urgent {
+  border-color: red;
+}
+
+#clock {
+  border-color: #64727d;
+}
+
+#battery {
+  border-color: #ffffff;
+  color: #000000;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: #ffffff;
+  border-color: #26a65b;
+}
+
+@keyframes blink {
+  to {
+    border-color: #ffffff;
+    color: #000000;
+  }
+}
+*/
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+
+/*
+#battery.critical:not(.charging) {
+  border-color: #f53c3c;
+  color: #ffffff;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#power-profiles-daemon.performance {
+  border-color: #f53c3c;
+  color: #ffffff;
+}
+
+#power-profiles-daemon.balanced {
+  border-color: #2980b9;
+  color: #ffffff;
+}
+
+#power-profiles-daemon.power-saver {
+  border-color: #2ecc71;
+  color: #000000;
+}
+
+label:focus {
+  border-color: #000000;
+}
+
+#cpu {
+  border-color: #2ecc71;
+  color: #000000;
+}
+
+#memory {
+  border-color: #9b59b6;
+}
+
+#disk {
+  border-color: #964b00;
+}
+
+#backlight {
+  border-color: #90b1b1;
+}
+
+#custom-media {
+  border-color: #66cc99;
+  color: #2a5c45;
+  min-width: 100px;
+}
+
+#custom-media.custom-spotify {
+  border-color: #66cc99;
+}
+
+#custom-media.custom-vlc {
+  border-color: #ffa000;
+}
+
+#temperature {
+  border-color: #f0932b;
+}
+
+#temperature.critical {
+  border-color: #eb4d4b;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  border-color: #eb4d4b;
+}
+
+#network.disconnected {
+  border-color: #f53c3c;
+}
+
+#idle_inhibitor.activated {
+  border-color: #ecf0f1;
+  color: #2d3436;
+}
+
+#mpd {
+  border-color: #66cc99;
+  color: #2a5c45;
+}
+
+#mpd.disconnected {
+  border-color: #f53c3c;
+}
+
+#mpd.stopped {
+  border-color: #90b1b1;
+}
+
+#mpd.paused {
+  border-color: #51a37a;
+}
+
+#language {
+  background: #00b093;
+  color: #740864;
+}
+
+#keyboard-state {
+  background: #97e1ad;
+  color: #000000;
+}
+
+#keyboard-state > label.locked {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad.empty {
+  border-color: transparent;
+}
+
+#privacy-item {
+  color: white;
+}
+
+#privacy-item.screenshare {
+  border-color: #cf5700;
+}
+
+#privacy-item.audio-in {
+  border-color: #1ca000;
+}
+
+#privacy-item.audio-out {
+  border-color: #0069d4;
+} */
