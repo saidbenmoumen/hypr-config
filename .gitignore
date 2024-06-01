@@ -1,0 +1,28 @@
+# ignore all 
+*
+
+!.gitignore 
+
+# sway
+!sway
+!sway/*
+
+# foot
+!foot
+!foot/*
+
+# waybar
+!waybar
+!waybar/*
+
+# wofi
+!wofi
+!wofi/*
+
+
+# hyprland
+!hypr
+!hypr/*
+
+
+!readme.md
