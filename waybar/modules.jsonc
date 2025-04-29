@@ -17,11 +17,11 @@
     "format-icons": {
       "urgent": "",
       "active": "",
-      "default": ""
+      "default": "",
     },
     "persistent_workspaces": {
-      "*": 5
-    }
+      "*": 5,
+    },
   },
 
   // Taskbar
@@ -33,12 +33,12 @@
     "on-click-middle": "close",
     "ignore-list": ["Alacritty"],
     "app_ids-mapping": {
-      "firefoxdeveloperedition": "firefox-developer-edition"
+      "firefoxdeveloperedition": "firefox-developer-edition",
     },
     "rewrite": {
       "Firefox Web Browser": "Firefox",
-      "Foot Server": "Terminal"
-    }
+      "Foot Server": "Terminal",
+    },
   },
 
   // Hyprland Window
@@ -48,9 +48,9 @@
       "(.*) - Chromium": "$1",
       "(.*) - Brave Search": "$1",
       "(.*) - Outlook": "$1",
-      "(.*) Microsoft Teams": "$1"
+      "(.*) Microsoft Teams": "$1",
     },
-    "separate-outputs": true
+    "separate-outputs": true,
   },
 
   // Cliphist
@@ -69,8 +69,8 @@
     "restart-interval": 60,
     "escape": true,
     "exec": "~/.config/waybar/get_updates.sh",
-    "on-click": "foot -e sudo dnf upgrade -y --refresh",
-    "tooltip": false
+    "on-click": "kitty -e sudo dnf upgrade -y --refresh",
+    "tooltip": false,
   },
 
   // Wallpaper
@@ -106,14 +106,14 @@
   "custom/appmenu": {
     "format": "Apps",
     "on-click": "~/dotfiles/scripts/applauncher.sh",
-    "tooltip": false
+    "tooltip": false,
   },
 
   // Power Menu
   "custom/exit": {
     "format": "",
     "on-click": "logout",
-    "tooltip": false
+    "tooltip": false,
   },
 
   // Keyboard State
@@ -123,8 +123,8 @@
     "format": "{name} {icon}",
     "format-icons": {
       "locked": "",
-      "unlocked": ""
-    }
+      "unlocked": "",
+    },
   },
 
   // System tray
@@ -139,19 +139,19 @@
   "clock": {
     // "timezone": "America/New_York",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d}"
+    "format-alt": "{:%Y-%m-%d}",
   },
 
   // CPU
   "cpu": {
     "format": "/  {usage}% ",
-    "on-click": "foot -e gotop"
+    "on-click": "foot -e gotop",
   },
 
   // Memory
   "memory": {
     "format": "/  {}%",
-    "on-click": "foot -e gotop"
+    "on-click": "foot -e gotop",
   },
 
   // Disk space used
@@ -159,7 +159,7 @@
     "interval": 30,
     "format": "D {percentage_used}% ",
     "path": "/",
-    "on-click": "foot -e gotop"
+    "on-click": "foot -e gotop",
   },
 
   // Network
@@ -172,7 +172,7 @@
     "tooltip-format-wifi": "   {essid} ({signalStrength}%)",
     "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
     "tooltip-format-disconnected": "Disconnected",
-    "max-length": 50
+    "max-length": 50,
   },
 
   // Battery
@@ -180,7 +180,7 @@
     "states": {
       "good": 95,
       "warning": 30,
-      "critical": 15
+      "critical": 15,
     },
     "format": "{icon}   {capacity}%",
     "format-charging": "  {capacity}%",
@@ -188,7 +188,7 @@
     "format-alt": "{icon}  {time}",
     "format-good": "", // An empty format will hide the module
     // "format-full": "",
-    "format-icons": [" ", " ", " ", " ", " "]
+    "format-icons": [" ", " ", " ", " ", " "],
   },
 
   // Pulseaudio
@@ -207,9 +207,9 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["", "", ""]
+      "default": ["", "", ""],
     },
-    "on-click": "pavucontrol"
+    "on-click": "pavucontrol",
   },
 
   // Bluetooth
@@ -217,13 +217,13 @@
     "format-disabled": "",
     "format-off": "",
     "interval": 30,
-    "on-click": "flatpak run io.github.kaii_lb.Overskride"
+    "on-click": "flatpak run io.github.kaii_lb.Overskride",
   },
 
   // Other
   "user": {
     "format": "{user} ",
     "interval": 60,
-    "icon": false
-  }
+    "icon": false,
+  },
 }
