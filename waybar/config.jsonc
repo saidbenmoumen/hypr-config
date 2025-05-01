@@ -10,10 +10,10 @@
 {
   // Position TOP
   "layer": "top",
-  "margin-top": 14,
+  "margin-top": 0,
   "margin-bottom": 0,
 
-  "height": 16,
+  "height": 10,
   "margin-left": 0,
   "margin-right": 0,
   "spacing": 0,
@@ -23,14 +23,13 @@
 
   // Modules Left
   "modules-left": [
-    "custom/appmenu",
-    // "custom/wallpaper",
+    "hyprland/workspaces",
     "wlr/taskbar",
     "hyprland/window"
   ],
 
   // Modules Center
-  "modules-center": ["hyprland/workspaces"],
+  "modules-center": [],
 
   // Modules Right
   "modules-right": [
@@ -41,7 +40,7 @@
     "battery",
     "group/hardware",
     "network",
-    "group/profile",
+    "keyboard",
     "clock"
   ],
 
@@ -51,9 +50,4 @@
     "modules": ["disk", "cpu", "memory"]
   },
 
-  // Group Profile
-  "group/profile": {
-    "orientation": "horizontal",
-    "modules": ["user", "custom/exit", "language"]
-  }
 }

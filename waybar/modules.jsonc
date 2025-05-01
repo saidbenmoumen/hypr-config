@@ -66,7 +66,7 @@
   "custom/updates": {
     "format": " {}",
     "return-type": "json",
-    "restart-interval": 60,
+    "restart-interval": 86400,
     "escape": true,
     "exec": "~/.config/waybar/get_updates.sh",
     "on-click": "kitty -e sudo dnf upgrade -y --refresh",
@@ -102,12 +102,6 @@
   //   "tooltip": false
   // },
 
-  // Rofi Application Launcher
-  "custom/appmenu": {
-    "format": "Apps",
-    "on-click": "~/dotfiles/scripts/applauncher.sh",
-    "tooltip": false,
-  },
 
   // Power Menu
   "custom/exit": {
@@ -165,8 +159,8 @@
   // Network
   "network": {
     "format": "{ifname}",
-    "format-wifi": " {signalStrength}%",
-    "format-ethernet": "  {ipaddr}",
+    "format-wifi": " ",
+    "format-ethernet": " {ipaddr}",
     "format-disconnected": "", //An empty format will hide the module.
     "tooltip-format": " {ifname} via {gwaddri}",
     "tooltip-format-wifi": "   {essid} ({signalStrength}%)",
@@ -182,11 +176,11 @@
       "warning": 30,
       "critical": 15,
     },
-    "format": "{icon}   {capacity}%",
-    "format-charging": "  {capacity}%",
-    "format-plugged": "  {capacity}%",
-    "format-alt": "{icon}  {time}",
-    "format-good": "", // An empty format will hide the module
+    "format": "{icon}{capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{icon} {time}",
+    "format-good": "{icon}{capacity}%", // An empty format will hide the module
     // "format-full": "",
     "format-icons": [" ", " ", " ", " ", " "],
   },

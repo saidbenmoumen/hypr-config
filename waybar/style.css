@@ -2,7 +2,7 @@
   font-family: "Noto Sans Mono", "Font Awesome 6 Free", "Font Awesome 6 Brands",
     monospace;
   transition: none;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 /* General */
@@ -12,11 +12,11 @@ window#waybar {
 }
 
 window#waybar box.modules-left {
-  padding-left: 1rem;
+    padding-left: 0;
 }
 
 window#waybar box.modules-right {
-  padding-right: 0.5rem;
+  padding-right: 0;
 }
 
 /* Buttons */
@@ -53,10 +53,10 @@ button:hover {
 #mpd,
 #workspaces button,
 #custom-updates {
-  padding: 0.1rem 1rem;
+  padding: 0 0.75rem;
   color: #ffffff;
   border-radius: 1rem;
-  margin: 0.4rem 0.2rem;
+  margin: 0.24rem 0.2rem;
   border: 2px solid #fafafa;
   font-weight: 700;
 }
