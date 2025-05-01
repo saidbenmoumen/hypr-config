@@ -14,10 +14,10 @@ sudo ln -s $path/wofi $HOME/.config/wofi
 printf "symbolic links set up!\n"
 
 # Handle target argument
-target=${1:-pc}  # Default to 'pc' if no argument is provided
+target=${1}  # No default value - must be provided explicitly
 
 if [ "$target" != "pc" ] && [ "$target" != "mac" ]; then
-    printf "Error: target must be either 'pc' or 'mac'\n"
+    printf "Error: target must be either 'pc' or 'mac'. got '$target'\n"
     exit 1
 fi
 
