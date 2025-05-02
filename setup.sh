@@ -24,6 +24,5 @@ fi
 # Create 'current' folder and copy target-specific configuration
 printf "Setting up $target configuration...\n"
 rm -rf $path/hypr/current
-mkdir -p $path/hypr/current
-cp -r $path/hypr/$target/* $path/hypr/current/
+ln -s $path/hypr/$target $HOME/.config/hypr/current
 printf "Done!\n"
