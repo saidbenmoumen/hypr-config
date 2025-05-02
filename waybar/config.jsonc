@@ -24,7 +24,7 @@
   // Modules Left
   "modules-left": [
     "hyprland/workspaces",
-    "wlr/taskbar",
+    // "wlr/taskbar",
     "hyprland/window"
   ],
 
@@ -33,7 +33,7 @@
 
   // Modules Right
   "modules-right": [
-    "tray",
+    // "tray",
     "custom/updates",
     "pulseaudio",
     "bluetooth",

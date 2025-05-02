@@ -2,7 +2,7 @@
   font-family: "Noto Sans Mono", "Font Awesome 6 Free", "Font Awesome 6 Brands",
     monospace;
   transition: none;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
 }
 
 /* General */
@@ -12,7 +12,7 @@ window#waybar {
 }
 
 window#waybar box.modules-left {
-    padding-left: 0;
+    padding-left: 0px;
 }
 
 window#waybar box.modules-right {
@@ -52,12 +52,12 @@ button:hover {
 #language,
 #mpd,
 #workspaces button,
-#custom-updates {
+#custom-updates, #window {
   padding: 0 0.75rem;
-  color: #ffffff;
+  color: #feffc4;
   border-radius: 1rem;
-  margin: 0.24rem 0.2rem;
-  border: 2px solid #fafafa;
+  margin: 0.24rem 0.2rem 0;
+  border: 1.5px solid #feffc4;
   font-weight: 700;
 }
 
@@ -70,8 +70,10 @@ button:hover {
 #hardware,
 #custom-exit,
 #tray,
-#user {
+#user,
+#window {
   border-color: transparent;
+  color: #feffc4;
 }
 
 /* Outlined */
@@ -81,16 +83,15 @@ button:hover {
 #bluetooth,
 #workspaces button.active,
 #custom-updates {
-  background: #fafafa;
-  color: #000000;
+  background: #feffc4;
+  color: #27272a;
 }
-
 /* -----------------------------------------------------
  * Workspaces
  * ----------------------------------------------------- */
 #workspaces button {
-  padding-right: 0.4rem;
-  padding-left: 0.4rem;
+  padding-right: 0.35rem;
+  padding-left: 0.35rem;
 }
 #workspaces button.urgent {
   border-color: red;

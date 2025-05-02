@@ -43,6 +43,9 @@
 
   // Hyprland Window
   "hyprland/window": {
+    "icon": false,
+    "icon-size": 21,
+    "format": "{}",
     "rewrite": {
       "(.*) - Brave": "$1",
       "(.*) - Chromium": "$1",
@@ -160,7 +163,7 @@
   // Network
   "network": {
     "format": "{ifname}",
-    "format-wifi": "  {ipaddr}",
+    "format-wifi": " {ipaddr}",
     "format-ethernet": " {ipaddr}",
     "format-disconnected": "", //An empty format will hide the module.
     "tooltip-format": " {ifname} via {gwaddri}",
@@ -179,8 +182,8 @@
     },
     "format": "{icon}{capacity}%",
     "format-charging": " {capacity}%",
-    "format-plugged": " {capacity}%",
-    "format-alt": "{icon} {time}",
+    "format-plugged": "{capacity}%",
+    "format-alt": "{icon}{time}",
     "format-good": "{icon}{capacity}%", // An empty format will hide the module
     // "format-full": "",
     "format-icons": [" ", " ", " ", " ", " "],
