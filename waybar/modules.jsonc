@@ -20,7 +20,7 @@
       "default": "",
     },
     "persistent_workspaces": {
-      "*": 5,
+      "*": 4,
     },
   },
 
@@ -133,7 +133,8 @@
   "clock": {
     // "timezone": "America/New_York",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d}",
+    "format-alt": "{:%a %d %b %Y}",
+    "format": "{:%I:%M%p}",
   },
 
   // CPU
@@ -159,7 +160,7 @@
   // Network
   "network": {
     "format": "{ifname}",
-    "format-wifi": " ",
+    "format-wifi": "  {ipaddr}",
     "format-ethernet": " {ipaddr}",
     "format-disconnected": "", //An empty format will hide the module.
     "tooltip-format": " {ifname} via {gwaddri}",
