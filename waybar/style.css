@@ -1,5 +1,6 @@
 * {
   font-size: 0.75rem;
+  min-height: initial;
 }
 
 /* General */
@@ -9,11 +10,9 @@ window#waybar {
 }
 
 window#waybar box.modules-left {
-    padding-left: 0px;
 }
 
 window#waybar box.modules-right {
-  padding-right: 0;
 }
 
 /* Buttons */
@@ -48,15 +47,17 @@ button:hover {
 #power-profiles-daemon,
 #language,
 #mpd,
-#workspaces button,
-#custom-updates, #window {
+#workspaces,
+#custom-updates, 
+#window {
   padding: 0 0.75rem;
   border-radius: 1rem;
-  margin: 0.24rem 0.2rem 0;
+  margin: 0.275rem 0 0;
   border: 1px solid;
   font-weight: 700;
   color: inherit;
 }
+
 
 /* Subtle */
 #hardware,
@@ -81,9 +82,13 @@ button:hover {
 /* -----------------------------------------------------
  * Workspaces
  * ----------------------------------------------------- */
-#workspaces button {
-  padding-right: 0.3rem;
-  padding-left: 0.3rem;
+#workspaces {
+  padding: 0.275rem 0.4rem;
+}
+#workspaces button {  
+  padding: 0 0.275rem;
+  color: inherit;
+  border-radius: 0.5rem;
 }
 #workspaces button.urgent {
   border-color: red;

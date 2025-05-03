@@ -13,10 +13,9 @@
   "margin-top": 0,
   "margin-bottom": 0,
 
-  "height": 10,
-  "margin-left": 0,
-  "margin-right": 0,
-  "spacing": 0,
+  "margin-left": 5,
+  "margin-right": 5,
+  "spacing": 5,
   "output": ["eDP-1", "DP-1"],
   // Load Modules
   "include": ["~/.config/waybar/modules.jsonc"],
@@ -49,5 +48,6 @@
     "orientation": "horizontal",
     "modules": ["disk", "cpu", "memory"]
   },
+  "reload_style_on_change": true,
 
 }
