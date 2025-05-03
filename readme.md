@@ -8,3 +8,4 @@
 - [ ] mac: swap alt with mainMod
 - [ ] mac: kernel fix top bar thingy
 - [ ] mac/pc: waybar -> modules specific for each platform
+- [ ] https://github.com/Alexays/Waybar/wiki/Styling#interactive-styling
