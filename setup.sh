@@ -3,7 +3,9 @@ path=$(pwd)
 
 # Install dependencies
 printf "Installing dependencies...\n"
-sudo dnf install -y hyprland waybar wofi grimshot neovim python3-neovim hyprpaper
+
+sudo dnf copr enable pgdev/ghostty
+sudo dnf install -y ghostty hyprland waybar wofi grimshot neovim python3-neovim hyprpaper
 
 # configs symbolic links
 printf "Setting up symbolic links...\n"
