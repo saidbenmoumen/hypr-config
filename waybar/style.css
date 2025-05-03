@@ -1,14 +1,11 @@
 * {
-  font-family: "Noto Sans Mono", "Font Awesome 6 Free", "Font Awesome 6 Brands",
-    monospace;
-  transition: none;
   font-size: 0.75rem;
 }
 
 /* General */
 window#waybar {
   background: transparent;
-  color: #ffffff;
+  color: rgb(254, 255, 196);
 }
 
 window#waybar box.modules-left {
@@ -54,16 +51,11 @@ button:hover {
 #workspaces button,
 #custom-updates, #window {
   padding: 0 0.75rem;
-  color: #feffc4;
   border-radius: 1rem;
   margin: 0.24rem 0.2rem 0;
-  border: 1.5px solid #feffc4;
+  border: 1px solid;
   font-weight: 700;
-}
-
-/* Light */
-#workspaces button:hover {
-  background: rgba(255, 255, 255, 0.5);
+  color: inherit;
 }
 
 /* Subtle */
@@ -73,7 +65,6 @@ button:hover {
 #user,
 #window {
   border-color: transparent;
-  color: #feffc4;
 }
 
 /* Outlined */
@@ -83,15 +74,16 @@ button:hover {
 #bluetooth,
 #workspaces button.active,
 #custom-updates {
-  background: #feffc4;
+  background: rgb(254, 255, 196);
   color: #27272a;
+  border-color: rgb(254, 255, 196);
 }
 /* -----------------------------------------------------
  * Workspaces
  * ----------------------------------------------------- */
 #workspaces button {
-  padding-right: 0.35rem;
-  padding-left: 0.35rem;
+  padding-right: 0.3rem;
+  padding-left: 0.3rem;
 }
 #workspaces button.urgent {
   border-color: red;
@@ -100,10 +92,6 @@ button:hover {
 /* -----------------------------------------------------
  * Custom Updates
  * ----------------------------------------------------- */
-#custom-updates.green {
-  background-color: #ffffff;
-}
-
 #custom-updates.yellow {
   background-color: #ff9a3c;
   border-color: #ff9a3c;

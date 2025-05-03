@@ -3,7 +3,7 @@ path=$(pwd)
 
 # Install dependencies
 printf "Installing dependencies...\n"
-sudo dnf install -y hyprland waybar wofi grimshot neovim python3-neovim
+sudo dnf install -y hyprland waybar wofi grimshot neovim python3-neovim hyprpaper
 
 # configs symbolic links
 printf "Setting up symbolic links...\n"

@@ -72,7 +72,7 @@
     "restart-interval": 86400,
     "escape": true,
     "exec": "~/.config/waybar/get_updates.sh",
-    "on-click": "kitty -e sudo dnf upgrade -y --refresh",
+    "on-click": "ghostty -e sudo dnf upgrade -y --refresh",
     "tooltip": false,
   },
 
@@ -134,7 +134,7 @@
 
   // Clock
   "clock": {
-    // "timezone": "America/New_York",
+    "timezone": "Africa/Casablanca",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%a %d %b %Y}",
     "format": "{:%I:%M%p}",
@@ -142,28 +142,28 @@
 
   // CPU
   "cpu": {
-    "format": "/  {usage}% ",
-    "on-click": "foot -e gotop",
+    "format": "/    {usage}%  ",
+    "on-click": "ghostty -e gotop",
   },
 
   // Memory
   "memory": {
-    "format": "/  {}%",
-    "on-click": "foot -e gotop",
+    "format": "/    {}%",
+    "on-click": "ghostty -e gotop",
   },
 
   // Disk space used
   "disk": {
     "interval": 30,
-    "format": "D {percentage_used}% ",
+    "format": "D {percentage_used}%  ",
     "path": "/",
-    "on-click": "foot -e gotop",
+    "on-click": "ghostty -e gotop",
   },
 
   // Network
   "network": {
     "format": "{ifname}",
-    "format-wifi": " {ipaddr}",
+    "format-wifi": "  {ipaddr}",
     "format-ethernet": " {ipaddr}",
     "format-disconnected": "", //An empty format will hide the module.
     "tooltip-format": " {ifname} via {gwaddri}",
@@ -182,9 +182,9 @@
     },
     "format": "{icon}{capacity}%",
     "format-charging": " {capacity}%",
-    "format-plugged": "{capacity}%",
-    "format-alt": "{icon}{time}",
-    "format-good": "{icon}{capacity}%", // An empty format will hide the module
+    "format-plugged": " {capacity}%",
+    "format-alt": "{icon} {time}",
+    "format-good": "{icon} {capacity}%", // An empty format will hide the module
     // "format-full": "",
     "format-icons": [" ", " ", " ", " ", " "],
   },
@@ -214,6 +214,7 @@
   "bluetooth": {
     "format-disabled": "",
     "format-off": "",
+    "format-on": "",
     "interval": 30,
     "on-click": "flatpak run io.github.kaii_lb.Overskride",
   },
