@@ -3,7 +3,7 @@ path=$(pwd)
 
 # Install dependencies
 printf "Installing dependencies...\n"
-sudo dnf install -y hyprland waybar wofi grimshot
+sudo dnf install -y hyprland waybar wofi grimshot neovim python3-neovim
 
 # configs symbolic links
 printf "Setting up symbolic links...\n"
@@ -11,7 +11,7 @@ sudo rm -rf $HOME/.config/hypr $HOME/.config/waybar $HOME/.config/wofi
 sudo ln -s $path/hypr $HOME/.config/hypr
 sudo ln -s $path/waybar $HOME/.config/waybar
 sudo ln -s $path/wofi $HOME/.config/wofi
-printf "symbolic links set up!\n"
+sudo ln -s $path/nvim $HOME/.config/nvim
 
 # Handle target argument
 target=${1}  # No default value - must be provided explicitly
