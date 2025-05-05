@@ -216,7 +216,7 @@
     "format-off": "",
     "format-on": "",
     "interval": 30,
-    "on-click": "flatpak run io.github.kaii_lb.Overskride",
+    "on-click": "blueman-manager",
   },
 
   // Other
