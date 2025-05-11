@@ -32,7 +32,7 @@
 
   // Modules Right
   "modules-right": [
-    // "tray",
+    "tray",
     "custom/updates",
     "pulseaudio",
     "bluetooth",
