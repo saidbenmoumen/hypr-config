@@ -765,7 +765,7 @@ require('lazy').setup({
         -- python = { "isort", "black" },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
-        -- javascript = { "prettierd", "prettier", stop_after_first = true },
+        javascript = { 'prettierd', 'prettier', stop_after_first = true },
       },
     },
   },
@@ -794,9 +794,9 @@ require('lazy').setup({
           --    https://github.com/rafamadriz/friendly-snippets
           -- {
           --   'rafamadriz/friendly-snippets',
-          --   config = function()
-          --     require('luasnip.loaders.from_vscode').lazy_load()
-          --   end,
+          --  config = function()
+          --    require('luasnip.loaders.from_vscode').lazy_load()
+          --  end,
           -- },
         },
         opts = {},
@@ -844,6 +844,57 @@ require('lazy').setup({
         -- By default, you may press `<c-space>` to show the documentation.
         -- Optionally, set `auto_show = true` to show the documentation after a delay.
         documentation = { auto_show = false, auto_show_delay_ms = 500 },
+
+        menu = {
+          draw = {
+            columns = {
+              { 'kind_icon', 'label', 'label_description', 'source_name', gap = 1 },
+            },
+            components = {
+              label_description = {
+                width = { max = 50 },
+                -- Function to customize the text in the label_description column
+                text = function(ctx)
+                  local item = ctx.item
+                  -- Prioritize 'detail' if available, as it often contains specific info
+                  if item.detail and item.detail ~= '' then
+                    return item.detail
+                  end
+                  -- Fallback to 'documentation' if 'detail' is empty, but limit length
+                  if item.documentation and item.documentation ~= '' then
+                    -- You might want to parse or truncate documentation
+                    -- This is a simple truncation example
+                    local doc_string = tostring(item.documentation)
+                    return doc_string:sub(1, 50) .. (doc_string:len() > 50 and '...' or '')
+                  end
+                  -- You could also try to infer from the label, but be careful
+                  -- local label_string = tostring(item.label)
+                  -- if label_string:match('^@') or label_string:match('^./') then
+                  --   return label_string
+                  -- end
+
+                  -- Default to an empty string if no relevant info is found
+                  return ''
+                end,
+              },
+              source_name = {
+                text = function(ctx)
+                  return '[' .. ctx.source_name .. ']'
+                end,
+              },
+            },
+          },
+          list = {
+            selection = {
+              preselect = false,
+            },
+          },
+          documentation = {
+            auto_show = true,
+            auto_show_delay_ms = 2000,
+          },
+          ghost_text = { enabled = true },
+        },
       },
 
       sources = {
