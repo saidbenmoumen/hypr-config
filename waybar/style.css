@@ -3,6 +3,16 @@
   min-height: initial;
 }
 
+/* Animations */
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
 /* General */
 window#waybar {
   background: transparent;
@@ -109,6 +119,27 @@ button:hover {
   color: #ffffff;
 }
 
+
+/* Battery */
+
+#battery.charging,
+#battery.plugged {
+  color: #ffffff;
+  background-color: #26a65b;
+  border-color: #26a65b;
+}
+
+#battery.critical:not(.charging) {
+  background-color: #ff1515;
+  border-color: #ff1515;
+  color: #ffffff;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
 /* PulseAudio */
 
 /* #pulseaudio {
@@ -149,37 +180,15 @@ button:hover {
   border-color: #64727d;
 }
 
-#battery {
-  border-color: #ffffff;
-  color: #000000;
-}
 
-#battery.charging,
-#battery.plugged {
-  color: #ffffff;
-  border-color: #26a65b;
-}
 
-@keyframes blink {
-  to {
-    border-color: #ffffff;
-    color: #000000;
-  }
-}
+
 */
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 
 /*
-#battery.critical:not(.charging) {
-  border-color: #f53c3c;
-  color: #ffffff;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: steps(12);
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
+
 
 #power-profiles-daemon.performance {
   border-color: #f53c3c;
