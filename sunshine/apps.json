@@ -4,47 +4,22 @@
     },
     "apps": [
         {
-            "name": "SunshinePC",
+            "name": "Sunshine",
             "detached": [
                 "setsid steam steam:\/\/open\/bigpicture"
             ],
             "prep-cmd": [
                 {
-                    "do": "hyprctl output create headless sunshine_pc",
-                    "undo": "hyprctl output remove sunshine_pc"
+                    "do": "hyprctl output create headless sunshine",
+                    "undo": "hyprctl output remove sunshine"
                 },
                 {
                     "do": "hyprctl reload",
                     "undo": "hyprctl reload"
                 },
                 {
-                    "do": "sh -c \"hyprctl keyword monitor sunshine_pc,${SUNSHINE_CLIENT_WIDTH}x${SUNSHINE_CLIENT_HEIGHT}@${SUNSHINE_CLIENT_FPS},0x0,1\"",
+                    "do": "sh -c \"hyprctl keyword monitor sunshine,${SUNSHINE_CLIENT_WIDTH}x${SUNSHINE_CLIENT_HEIGHT}@${SUNSHINE_CLIENT_FPS},0x0,1\"",
                     "undo": ""
-                },
-                {
-                    "do": "hyprctl keyword monitor DP-1,disable",
-                    "undo": "hyprctl dispatch focusmonitor DP-1"
-                },
-                {
-                    "do": "hyprctl dispatch workspace 10",
-                    "undo": "hyprctl dispatch workspace 1"
-                }
-            ],
-            "wait-all": true
-        },
-        {
-            "name": "SunshineDeck",
-            "detached": [
-                "setsid steam steam:\/\/open\/bigpicture"
-            ],
-            "prep-cmd": [
-                {
-                    "do": "hyprctl output create headless sunshine_deck",
-                    "undo": "hyprctl output remove sunshine_deck"
-                },
-                {
-                    "do": "hyprctl reload",
-                    "undo": "hyprctl reload"
                 },
                 {
                     "do": "hyprctl keyword monitor DP-1,disable",
