@@ -2,16 +2,12 @@
 
 # TODO
 - https://wiki.hyprland.org/Useful-Utilities/Other/#automatically-mounting-using-udiskie
+- wallpaper (video / gif / image)
+- https://github.com/Alexays/Waybar/wiki/Styling#interactive-styling
 
-- [ ] wallpaper (video / gif / image)
-- [ ] mac/pc: waybar -> modules specific for each platform
-- [ ] https://github.com/Alexays/Waybar/wiki/Styling#interactive-styling
-
-
-
-# GAMING
-- make all games run on steam to open on workspace 5 when running moondeck? + fullscreen
-- fix resolution problem? if there is one (try on big monitor)
-- workspace 5 no gap no sace no border no radius (clean workspace so nothing would show up there?)
-
+# SUNSHINE 
 https://github.com/hyprwm/Hyprland/issues/5415#issuecomment-2035830853
+- steam overlay pc & steam deck overlay -> double open / double close problems?
+- moonlight auto resolution & refresh rate? 1080p -> 1280x800
+- make sure hardware decoders are working AMD? https://docs.lizardbyte.dev/projects/sunshine/latest/md_docs_2configuration.html#encoder
+- auto enable HDR for 1440@144hz monitor?
