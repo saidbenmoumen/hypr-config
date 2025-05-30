@@ -36,12 +36,12 @@
     #       and the given value is treated as the maximum height
 
     # Position the notification in the top right corner
-    origin = top-right
+    origin = bottom-center
 
     # Offset from the origin
     # NOTE: Dunst from version 1.11 and older use this alternative notation
     # offset = 10x50
-    offset = (10, 50)
+    offset = (0, 8)
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -108,10 +108,10 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 3
+    frame_width = 1
 
     # Defines color of the frame around the notification window.
-    frame_color = "#aaaaaa"
+    frame_color = "#feffc4"
 
     # Size of gap to display between notifications - requires a compositor.
     # If value is greater than 0, separator_height will be ignored and a border
@@ -232,10 +232,10 @@
     # Scale small icons up to this size, set to 0 to disable. Helpful
     # for e.g. small files or high-dpi screens. In case of conflict,
     # max_icon_size takes precedence over this.
-    min_icon_size = 32
+    min_icon_size = 16 
 
     # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 128
+    max_icon_size = 16 
 
     # Paths to default icons (only necessary when not using recursive icon lookup)
     icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
@@ -271,7 +271,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 0
+    corner_radius = 3
 
     # Define which corners to round when drawing the window. If the corner radius
     # is set to 0 this option will be ignored.
@@ -341,23 +341,25 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#222222"
-    foreground = "#888888"
+    background = "#feffc4"
+    foreground = "#000000"
+    frame_color = "#feffc4"
     timeout = 10
     # Icon for notifications with low urgency
     default_icon = dialog-information
 
 [urgency_normal]
-    background = "#285577"
-    foreground = "#ffffff"
+    background = "#feffc4"
+    foreground = "#000000"
+    frame_color = "#feffc4"
     timeout = 10
     override_pause_level = 30
     # Icon for notifications with normal urgency
     default_icon = dialog-information
 
 [urgency_critical]
-    background = "#900000"
-    foreground = "#ffffff"
+    background = "#ff0000"
+    foreground = "#000000"
     frame_color = "#ff0000"
     timeout = 0
     override_pause_level = 60

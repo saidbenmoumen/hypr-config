@@ -10,7 +10,8 @@ mkdir -p $HOME/.config/dunst
 
 # configs symbolic links
 printf "Setting up symbolic links...\n"
-rm -rf $HOME/.config/dunst/dunstrc && ln -s $path/dunst/dunstrc $HOME/.config/dunst/dunstrc # hyprland
+rm -rf $HOME/.config/dunst/dunstrc
+ln -s $path/dunstrc $HOME/.config/dunst/dunstrc
 
 # DONE
 printf "Done!\n"
