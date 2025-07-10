@@ -68,4 +68,5 @@ return {
       ft = { 'markdown', 'Avante' },
     },
   },
+  'Kaiser-Yang/blink-cmp-avante',
 }
