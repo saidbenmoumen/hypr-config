@@ -17,3 +17,7 @@ https://github.com/hyprwm/Hyprland/issues/5415#issuecomment-2035830853
 - clock stopwatch component (start + pause + reset)
 - desktop view as lock screen (clock, weather, etc)
 - on idle switch to lock/desktop view
+
+# AVANTE
+
+https://github.com/yetone/avante.nvim#neotree-shortcut
