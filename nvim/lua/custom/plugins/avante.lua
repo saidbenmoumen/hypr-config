@@ -18,6 +18,7 @@ return {
     -- add any opts here
     -- for example
     provider = 'claude',
+    auto_suggestions_provider = 'claude',
     providers = {
       claude = {
         endpoint = 'https://api.anthropic.com',
@@ -30,6 +31,13 @@ return {
         },
       },
     },
+    behaviour = {
+      auto_suggestions = true, -- Experimental stage?
+    },
+    suggestion = {
+      debounce = 600,
+      throttle = 600,
+    },
   },
   dependencies = {
     'nvim-lua/plenary.nvim',
@@ -37,6 +45,7 @@ return {
     --- The below dependencies are optional,
     'echasnovski/mini.pick', -- for file_selector provider mini.pick
     'nvim-telescope/telescope.nvim', -- for file_selector provider telescope
+    -- 'hrsh7th/nvim-cmp', -- autocompletion for avante commands and mentions
     'ibhagwan/fzf-lua', -- for file_selector provider fzf
     'stevearc/dressing.nvim', -- for input provider dressing
     'folke/snacks.nvim', -- for input provider snacks
@@ -68,5 +77,4 @@ return {
       ft = { 'markdown', 'Avante' },
     },
   },
-  'Kaiser-Yang/blink-cmp-avante',
 }

@@ -21,3 +21,10 @@ https://github.com/hyprwm/Hyprland/issues/5415#issuecomment-2035830853
 # AVANTE
 
 https://github.com/yetone/avante.nvim#neotree-shortcut
+
+# NEOVIM
+
+https://github.com/omerxx/dotfiles
+
+- filter?
+- Cmdline popup + auto completion/suggestions for commands

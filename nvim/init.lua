@@ -775,6 +775,7 @@ require('lazy').setup({
     event = 'VimEnter',
     version = '1.*',
     dependencies = {
+      'Kaiser-Yang/blink-cmp-avante',
       -- Snippet Engine
       {
         'L3MON4D3/LuaSnip',
@@ -884,16 +885,16 @@ require('lazy').setup({
               },
             },
           },
-          list = {
-            selection = {
-              preselect = false,
-            },
-          },
-          documentation = {
-            auto_show = true,
-            auto_show_delay_ms = 2000,
-          },
-          ghost_text = { enabled = true },
+          --list = {
+          --   selection = {
+          --    preselect = false,
+          --  },
+          -- },
+          -- documentation = {
+          --  auto_show = true,
+          --  auto_show_delay_ms = 2000,
+          -- },
+          -- ghost_text = { enabled = true },
         },
       },
 
