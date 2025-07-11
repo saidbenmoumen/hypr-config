@@ -885,16 +885,16 @@ require('lazy').setup({
               },
             },
           },
-          --list = {
-          --   selection = {
-          --    preselect = false,
-          --  },
-          -- },
-          -- documentation = {
-          --  auto_show = true,
-          --  auto_show_delay_ms = 2000,
-          -- },
-          -- ghost_text = { enabled = true },
+          list = {
+            selection = {
+              preselect = false,
+            },
+          },
+          documentation = {
+            auto_show = true,
+            auto_show_delay_ms = 2000,
+          },
+          ghost_text = { enabled = true },
         },
       },
 

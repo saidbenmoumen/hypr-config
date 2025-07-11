@@ -32,7 +32,7 @@ return {
       },
     },
     behaviour = {
-      auto_suggestions = true, -- Experimental stage?
+      auto_suggestions = false, -- TODO: check later
     },
     suggestion = {
       debounce = 600,
