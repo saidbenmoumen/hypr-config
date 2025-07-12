@@ -4,25 +4,23 @@ return {
   lazy = false,
   ---@type snacks.Config
   opts = {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
     bigfile = { enabled = false },
     dashboard = {
       enabled = true,
-      sections = {
-        { section = 'header' },
-        { section = 'keys', gap = 1, padding = 1 },
-        { section = 'startup' },
-        {
-          section = 'terminal',
-          cmd = 'pokemon-colorscripts -r --no-title; sleep .1',
-          random = 10,
-          pane = 2,
-          indent = 4,
-          height = 30,
-        },
-      },
+      example = 'github',
+      -- sections = {
+      --   { section = 'header' },
+      -- { section = 'keys', gap = 1, padding = 1 },
+      -- { section = 'startup' },
+      -- {
+      --   section = 'terminal',
+      -- cmd = 'pokemon-colorscripts -r --no-title; sleep .1',
+      -- random = 10,
+      -- pane = 2,
+      -- indent = 4,
+      --   height = 30,
+      -- },
+      --   },
     },
     explorer = { enabled = true, replace_netrw = true },
     indent = { enabled = false },
@@ -35,9 +33,10 @@ return {
     quickfile = { enabled = false },
     scope = { enabled = false },
     scroll = { enabled = false },
-    statuscolumn = { enabled = false },
+    statuscolumn = { enabgled = false },
     words = { enabled = false },
     debug = { enabled = false },
+    lazygit = { enabled = true },
   },
   keys = {
     -- Top Pickers & Explorer
@@ -62,8 +61,20 @@ return {
       end,
       desc = 'Grep',
     },
-    -- { "<leader>:", function() Snacks.picker.command_history() end, desc = "Command History" },
-    -- { "<leader>n", function() Snacks.picker.notifications() end, desc = "Notification History" },
+    {
+      '<leader>:',
+      function()
+        Snacks.picker.command_history()
+      end,
+      desc = 'Command History',
+    },
+    {
+      '<leader>n',
+      function()
+        Snacks.picker.notifications()
+      end,
+      desc = 'Notification History',
+    },
     {
       '<leader>e',
       function()
@@ -165,10 +176,35 @@ return {
       desc = 'Git Log File',
     },
     -- Grep
-    -- { "<leader>sb", function() Snacks.picker.lines() end, desc = "Buffer Lines" },
-    -- { "<leader>sB", function() Snacks.picker.grep_buffers() end, desc = "Grep Open Buffers" },
-    -- { "<leader>sg", function() Snacks.picker.grep() end, desc = "Grep" },
-    -- { "<leader>sw", function() Snacks.picker.grep_word() end, desc = "Visual selection or word", mode = { "n", "x" } },
+    {
+      '<leader>sb',
+      function()
+        Snacks.picker.lines()
+      end,
+      desc = 'Buffer Lines',
+    },
+    {
+      '<leader>sB',
+      function()
+        Snacks.picker.grep_buffers()
+      end,
+      desc = 'Grep Open Buffers',
+    },
+    {
+      '<leader>sg',
+      function()
+        Snacks.picker.grep()
+      end,
+      desc = 'Grep',
+    },
+    {
+      '<leader>sw',
+      function()
+        Snacks.picker.grep_word()
+      end,
+      desc = 'Visual selection or word',
+      mode = { 'n', 'x' },
+    },
     -- search
     -- { '<leader>s"', function() Snacks.picker.registers() end, desc = "Registers" },
     -- { '<leader>s/', function() Snacks.picker.search_history() end, desc = "Search History" },
@@ -208,7 +244,13 @@ return {
     -- { "<leader>bd", function() Snacks.bufdelete() end, desc = "Delete Buffer" },
     -- { "<leader>cR", function() Snacks.rename.rename_file() end, desc = "Rename File" },
     -- { "<leader>gB", function() Snacks.gitbrowse() end, desc = "Git Browse", mode = { "n", "v" } },
-    -- { "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit" },
+    {
+      '<leader>gg',
+      function()
+        Snacks.lazygit()
+      end,
+      desc = 'Lazygit',
+    },
     -- { "<leader>un", function() Snacks.notifier.hide() end, desc = "Dismiss All Notifications" },
     -- { "<c-/>",      function() Snacks.terminal() end, desc = "Toggle Terminal" },
     -- { "<c-_>",      function() Snacks.terminal() end, desc = "which_key_ignore" },
