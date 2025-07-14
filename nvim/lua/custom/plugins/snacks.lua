@@ -25,9 +25,9 @@ return {
     explorer = { enabled = true, replace_netrw = true },
     indent = { enabled = false },
     input = { enabled = false },
-    picker = { enabled = true, hidden = true, ignored = true, sources = { files = {
+    picker = { enabled = true, hidden = true, ignored = false, sources = { files = {
       hidden = true,
-      ignored = true,
+      ignored = false,
     } } },
     notifier = { enabled = true },
     quickfile = { enabled = false },
