@@ -16,21 +16,20 @@ return {
     ---@module 'avante'
     ---@type avante.Config
     opts = {
-      -- add any opts here
-      -- for example
-      provider = "claude",
-      providers = {
-        claude = {
-          endpoint = "https://api.anthropic.com",
-          model = "claude-sonnet-4-20250514",
-          api_key_name = "AVANTE_ANTHROPIC_API_KEY",
-          timeout = 30000, -- Timeout in milliseconds
-          extra_request_body = {
-            temperature = 0.75,
-            max_tokens = 20480,
-          },
-        },
-      },
+      provider = "copilot",
+      -- provider = "claude",
+      -- providers = {
+      --   claude = {
+      --     endpoint = "https://api.anthropic.com",
+      --     model = "claude-sonnet-4-20250514",
+      --     api_key_name = "AVANTE_ANTHROPIC_API_KEY",
+      --     timeout = 30000, -- Timeout in milliseconds
+      --     extra_request_body = {
+      --       temperature = 0.75,
+      --       max_tokens = 20480,
+      --     },
+      --   },
+      -- },
     },
     dependencies = {
       "nvim-lua/plenary.nvim",
