@@ -20,8 +20,16 @@ require("lazy").setup({
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     -- coding
     { import = "lazyvim.plugins.extras.formatting.prettier" },
+
     { import = "lazyvim.plugins.extras.lang.tailwind" },
+    { import = "lazyvim.plugins.extras.lang.markdown" },
     { import = "lazyvim.plugins.extras.lang.prisma" },
+    { import = "lazyvim.plugins.extras.lang.json" },
+
+    { import = "lazyvim.plugins.extras.util.dot" },
+
+    { import = "lazyvim.plugins.extras.ai.supermaven" },
+
     -- import/override with your plugins
     { import = "plugins" },
   },
