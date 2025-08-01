@@ -18,6 +18,9 @@ return {
       },
     },
   },
+  {
+    "ThePrimeagen/vim-be-good",
+  },
 
   -- NOTE: needed as lazy ts plugin so barebone & slow
   {

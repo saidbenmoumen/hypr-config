@@ -7,7 +7,9 @@ return {
         example = "github",
       },
       scroll = { enabled = false },
+      input = { enabled = true },
       picker = {
+        enabled = true,
         ui_select = true,
         hidden = true,
         ignored = true,
