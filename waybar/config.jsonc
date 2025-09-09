@@ -12,24 +12,26 @@
   "layer": "top",
   "margin-top": 0,
   "margin-bottom": 0,
-
   "margin-left": 5,
   "margin-right": 5,
   "spacing": 5,
-  "output": ["eDP-1", "DP-1"],
+  "output": [
+    "eDP-1",
+    "DP-1"
+  ],
   // Load Modules
-  "include": ["~/.config/waybar/modules.jsonc"],
-
+  "include": [
+    "~/.config/waybar/modules.jsonc"
+  ],
   // Modules Left
   "modules-left": [
     "hyprland/workspaces",
     // "wlr/taskbar",
-    "hyprland/window"
+    "group/hardware",
+    "hyprland/window",
   ],
-
   // Modules Center
   "modules-center": [],
-
   // Modules Right
   "modules-right": [
     "tray",
@@ -37,17 +39,17 @@
     "pulseaudio",
     "bluetooth",
     "battery",
-    "group/hardware",
     "network",
     "keyboard",
     "clock"
   ],
-
   // Group Hardware
   "group/hardware": {
     "orientation": "horizontal",
-    "modules": ["disk", "cpu", "memory"]
+    "modules": [
+      "cpu",
+      "memory"
+    ]
   },
   "reload_style_on_change": true,
-
 }

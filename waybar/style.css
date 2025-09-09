@@ -70,7 +70,6 @@ button:hover {
 
 
 /* Subtle */
-#hardware,
 #custom-exit,
 #tray,
 #user,
@@ -81,6 +80,7 @@ button:hover {
 /* Outlined */
 
 /* Solid */
+#hardware,
 #pulseaudio,
 #bluetooth,
 #workspaces button.active,

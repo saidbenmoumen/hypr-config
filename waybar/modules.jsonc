@@ -23,7 +23,6 @@
       "*": 4
     }
   },
-
   // Taskbar
   "wlr/taskbar": {
     "format": "{icon}",
@@ -31,7 +30,9 @@
     "tooltip-format": "{title}",
     "on-click": "activate",
     "on-click-middle": "close",
-    "ignore-list": ["Alacritty"],
+    "ignore-list": [
+      "Alacritty"
+    ],
     "app_ids-mapping": {
       "firefoxdeveloperedition": "firefox-developer-edition",
     },
@@ -40,7 +41,6 @@
       "Foot Server": "Terminal",
     },
   },
-
   // Hyprland Window
   "hyprland/window": {
     "icon": false,
@@ -55,7 +55,6 @@
     },
     "separate-outputs": true,
   },
-
   // Cliphist
   // "custom/cliphist": {
   //   "format": "",
@@ -64,7 +63,6 @@
   //   "on-click-middle": "sleep 0.1 && ~/dotfiles/scripts/cliphist.sh w",
   //   "tooltip": false
   // },
-
   // Updates Count
   "custom/updates": {
     "format": " {}",
@@ -75,7 +73,6 @@
     "on-click": "ghostty -e sudo dnf upgrade -y --refresh",
     "tooltip": false,
   },
-
   // Wallpaper
   // "custom/wallpaper": {
   //   "format": "",
@@ -83,36 +80,30 @@
   //   "on-click": "~/dotfiles/scripts/updatewal-swww.sh",
   //   "tooltip": false
   // },
-
   // Filemanager Launcher
   // "custom/filemanager": {
   //   "format": "",
   //   "on-click": "~/dotfiles/scripts/filemanager.sh",
   //   "tooltip": false
   // },
-
   // // Rofi Calculator
   // "custom/calculator": {
   //   "format": "",
   //   "on-click": "~/dotfiles/scripts/calculator.sh",
   //   "tooltip": false
   // },
-
   // // Windows VM
   // "custom/windowsvm": {
   //   "format": "",
   //   "on-click": "~/private/launchvm.sh",
   //   "tooltip": false
   // },
-
-
   // Power Menu
   "custom/exit": {
     "format": "",
     "on-click": "logout",
     "tooltip": false,
   },
-
   // Keyboard State
   "keyboard-state": {
     "numlock": true,
@@ -123,7 +114,6 @@
       "unlocked": "",
     },
   },
-
   // System tray
   "tray": {
     // "icon-size": 21,
@@ -131,27 +121,22 @@
     // "gtk-layer-shell": false,
     //"on-click": "sleep 0.1 && swaync-client -t -sw"
   },
-
   // Clock
   "clock": {
     "timezone": "Africa/Casablanca",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%a %d %b %Y}",
-    "format": "{:%I:%M%p}",
+    "format": "{:%I:%M%p %a %d %b %Y}"
   },
-
   // CPU
   "cpu": {
-    "format": "/    {usage}%  ",
+    "format": "   {usage}%  ",
     "on-click": "ghostty -e gotop",
   },
-
   // Memory
   "memory": {
     "format": "/    {}%",
     "on-click": "ghostty -e gotop",
   },
-
   // Disk space used
   "disk": {
     "interval": 30,
@@ -159,7 +144,6 @@
     "path": "/",
     "on-click": "ghostty -e gotop",
   },
-
   // Network
   "network": {
     "format": "{ifname}",
@@ -172,7 +156,6 @@
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
   },
-
   // Battery
   "battery": {
     "states": {
@@ -186,9 +169,14 @@
     "format-alt": "{icon} {time}",
     "format-good": "{icon} {capacity}%", // An empty format will hide the module
     // "format-full": "",
-    "format-icons": [" ", " ", " ", " ", " "],
+    "format-icons": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ],
   },
-
   // Pulseaudio
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
@@ -205,11 +193,14 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["", "", ""],
+      "default": [
+        "",
+        "",
+        ""
+      ],
     },
     "on-click": "pavucontrol",
   },
-
   // Bluetooth
   "bluetooth": {
     "format-disabled": "",
@@ -218,7 +209,6 @@
     "interval": 30,
     "on-click": "blueman-manager",
   },
-
   // Other
   "user": {
     "format": "{user} ",
