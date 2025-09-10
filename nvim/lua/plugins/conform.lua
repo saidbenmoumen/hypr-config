@@ -10,6 +10,8 @@ return {
       opts.formatters_by_ft.less = { "prettier" }
       opts.formatters_by_ft.astro = { "prettier" }
 
+      opts.formatters_by_ft.nginx = { "nginxfmt" }
+
       --
       opts.formatters.prettier.command = "prettier"
       opts.formatters.prettier.args = { "--stdin-filepath", "$FILENAME" }

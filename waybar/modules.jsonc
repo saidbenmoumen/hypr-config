@@ -20,7 +20,7 @@
       "default": "",
     },
     "persistent-workspaces": {
-      "*": 4
+      "*": 1
     }
   },
   // Taskbar
@@ -129,7 +129,7 @@
   },
   // CPU
   "cpu": {
-    "format": "   {usage}%  ",
+    "format": "  {usage}%  ",
     "on-click": "ghostty -e gotop",
   },
   // Memory

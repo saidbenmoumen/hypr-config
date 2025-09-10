@@ -3,7 +3,8 @@ path=$(pwd)
 
 # intsalling dependencies
 # printf "Installing dependencies...\n"
-# sudo dnf install dunst -y
+sudo dnf copr enable errornointernet/walker
+sudo dnf install walker
 
 # making directories
 mkdir -p $HOME/.config/walker
